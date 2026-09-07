@@ -61,7 +61,7 @@ import matplotlib.pyplot as plt
 
 img = np.zeros((400, 600), dtype=np.uint8)
 
-cv2.putText(img, "KEERTHANA C", (80, 200),
+cv2.putText(img, "SHIVAANI R", (80, 200),
             cv2.FONT_HERSHEY_SIMPLEX, 1.5, 255, 3)
 
 kernel = np.ones((5, 5), np.uint8)
@@ -102,7 +102,8 @@ plt.show()
 
 - The input image is displayed.
 - The image serves as the source for morphological processing.
-<img width="229" height="164" alt="image" src="https://github.com/user-attachments/assets/5b1b0d59-f8c1-4063-bc7a-4500fda25638" />
+<img width="328" height="222" alt="Screenshot 2026-09-07 195633" src="https://github.com/user-attachments/assets/fe0134a5-5810-440f-84e8-d69a2fc2b59a" />
+
 
 ### Opening Operation
 
@@ -111,7 +112,8 @@ plt.show()
 - Small foreground noise is removed.
 - Thin protrusions and isolated pixels are eliminated.
 - Object boundaries become smoother.
-<img width="237" height="174" alt="image" src="https://github.com/user-attachments/assets/e3a699ec-1df8-4a7b-ab76-62f4e4a174e7" />
+<img width="327" height="241" alt="Screenshot 2026-09-07 195710" src="https://github.com/user-attachments/assets/9a90cdcf-9cf6-4050-9a6d-5dd36663fbf9" />
+
 
 ### Closing Operation
 
@@ -120,7 +122,8 @@ plt.show()
 - Small holes and gaps inside objects are filled.
 - Broken regions are connected.
 - Object boundaries become more continuous.
-<img width="232" height="171" alt="image" src="https://github.com/user-attachments/assets/4b0f11d5-4cc4-4404-a66b-32cf9943976b" />
+<img width="330" height="242" alt="Screenshot 2026-09-07 195733" src="https://github.com/user-attachments/assets/e4f526ff-d6f1-4906-9dea-e89e8c1dca03" />
+
 
 ## Applications
 
