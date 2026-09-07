@@ -54,12 +54,47 @@ Create a structuring element (kernel) of suitable size.
 Compare the original, opened, and closed images.
 
 ## Program
+```
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
 
+img = np.zeros((400, 600), dtype=np.uint8)
+
+cv2.putText(img, "KEERTHANA C", (80, 200),
+            cv2.FONT_HERSHEY_SIMPLEX, 1.5, 255, 3)
+
+kernel = np.ones((5, 5), np.uint8)
+
+opening = cv2.morphologyEx(img, cv2.MORPH_OPEN, kernel)
+
+closing = cv2.morphologyEx(img, cv2.MORPH_CLOSE, kernel)
+
+plt.figure(figsize=(12, 4))
+
+plt.subplot(1, 3, 1)
+plt.imshow(img, cmap="gray")
+plt.title("Original")
+plt.axis("off")
+
+plt.subplot(1, 3, 2)
+plt.imshow(opening, cmap="gray")
+plt.title("Opening")
+plt.axis("off")
+
+plt.subplot(1, 3, 3)
+plt.imshow(closing, cmap="gray")
+plt.title("Closing")
+plt.axis("off")
+
+plt.tight_layout()
+plt.show()
+```
 ## Developed By
 
-**Name:** ____________________________
+**Name:** SHIVAANI R
 
-**Register No:** ______________________
+**Register No:** 212224220097
 
 ## Output
 
@@ -67,6 +102,7 @@ Compare the original, opened, and closed images.
 
 - The input image is displayed.
 - The image serves as the source for morphological processing.
+<img width="229" height="164" alt="image" src="https://github.com/user-attachments/assets/5b1b0d59-f8c1-4063-bc7a-4500fda25638" />
 
 ### Opening Operation
 
@@ -75,6 +111,7 @@ Compare the original, opened, and closed images.
 - Small foreground noise is removed.
 - Thin protrusions and isolated pixels are eliminated.
 - Object boundaries become smoother.
+<img width="237" height="174" alt="image" src="https://github.com/user-attachments/assets/e3a699ec-1df8-4a7b-ab76-62f4e4a174e7" />
 
 ### Closing Operation
 
@@ -83,6 +120,7 @@ Compare the original, opened, and closed images.
 - Small holes and gaps inside objects are filled.
 - Broken regions are connected.
 - Object boundaries become more continuous.
+<img width="232" height="171" alt="image" src="https://github.com/user-attachments/assets/4b0f11d5-4cc4-4404-a66b-32cf9943976b" />
 
 ## Applications
 
